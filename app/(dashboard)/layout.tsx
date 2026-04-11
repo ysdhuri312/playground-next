@@ -16,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className='min-h-full flex flex-col'>
-        {/* <header className='bg-amber-400'>Header</header> */}
-        <main>{children}</main>
-        {/* <footer className='bg-red-700'>Footer</footer> */}
-      </body>
-    </html>
+    <>
+      <header className='bg-amber-400'>dashHeader</header>
+      <main>{children}</main>
+      <footer className='bg-red-700'>dashFooter</footer>
+    </>
   );
 }
