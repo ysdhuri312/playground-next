@@ -2,6 +2,10 @@
 
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'wow',
+};
+
 export default function Me() {
   return (
     <div>
