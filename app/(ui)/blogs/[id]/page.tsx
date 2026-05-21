@@ -23,5 +23,10 @@ export default async function Blog({
     return notFound();
   }
 
-  return <div>Blog {id}</div>;
+  return (
+    <div>
+      <h1>Welcome to Our Blog {id}</h1>
+      <p>This is blog {id} page.</p>
+    </div>
+  );
 }

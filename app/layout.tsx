@@ -1,6 +1,8 @@
 /** @format */
 
 import type { Metadata } from 'next';
+import './globals.css';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: {
@@ -17,10 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='min-h-full flex flex-col'>
-        {/* <header className='bg-amber-400'>Header</header> */}
-        <main>{children}</main>
-        {/* <footer className='bg-red-700'>Footer</footer> */}
+      <body className='min-h-full'>
+        <header className='bg-amber-400 flex justify-center gap-4'>
+          <Link href='/'>Home</Link>
+          <Link href='/about'>About</Link>
+          <Link href='/blogs'>Blogs</Link>
+          <Link href='/services'>Services</Link>
+        </header>
+        <main className='text-center my-5'>{children}</main>
+        <footer className='bg-red-500 text-center'>Footer</footer>
       </body>
     </html>
   );
