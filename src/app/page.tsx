@@ -5,7 +5,7 @@ import { RegisterForm } from '../modules/auth/components/Register';
 
 export default function Home() {
   return (
-    <div className='flex gap-0.5'>
+    <div className='flex items-center gap-0.5'>
       <RegisterForm />
       <Login />
     </div>

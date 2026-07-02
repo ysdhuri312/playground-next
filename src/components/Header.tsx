@@ -1,5 +1,6 @@
 /** @format */
 
+import Link from 'next/link';
 import MenuBar from './MenuBar';
 import { Tabs, TabsList, TabsTrigger } from './ui/tabs';
 
@@ -12,9 +13,15 @@ export default function Header() {
           <nav className='md:flex gap-4 text-xl'>
             <Tabs defaultValue='home'>
               <TabsList variant='line'>
-                <TabsTrigger value='home'>Home</TabsTrigger>
-                <TabsTrigger value='archives'>Archives</TabsTrigger>
-                <TabsTrigger value='about'>About</TabsTrigger>
+                <TabsTrigger value='home'>
+                  <Link href='/'>Home</Link>
+                </TabsTrigger>
+                <TabsTrigger value='archives'>
+                  <Link href='/archives'>Archives</Link>
+                </TabsTrigger>
+                <TabsTrigger value='about'>
+                  <Link href='/about'>About</Link>
+                </TabsTrigger>
               </TabsList>
             </Tabs>
           </nav>
